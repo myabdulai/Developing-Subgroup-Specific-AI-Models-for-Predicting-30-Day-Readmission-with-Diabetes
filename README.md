@@ -4,6 +4,14 @@ By segmenting patients into diagnostic subgroups (Circulatory, Respiratory, and 
 
 <h2><strong>🎯 Project Objectives</strong></h2> <h3><strong>1. Data Preparation & Preprocessing</strong></h3>
 
+Develop subgroup-specific AI models for predicting 30-day hospital readmission
+Stratify patients by primary diagnosis (circulatory, respiratory, endocrine)
+Compare performance of subgroup vs. global models
+Identify subgroup-specific risk factors for targeted interventions
+Enhance clinical decision support for personalized care
+<img width="1097" height="251" alt="image" src="https://github.com/user-attachments/assets/219826ae-d938-4226-9caf-e091abca4b63" />
+
+<h2><strong>Data Preparation & Preprocessing</strong</h2> <h3>
 Cleaned and preprocessed all variables
 
 Removed high-missingness variables
