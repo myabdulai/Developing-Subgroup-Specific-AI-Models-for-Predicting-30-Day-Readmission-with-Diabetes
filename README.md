@@ -1,63 +1,72 @@
-🩺 <strong>Subgroup-Specific AI Models for Predicting 30-Day Readmission in Diabetes Patients</strong>
+This project develops global and subgroup-specific machine learning models to predict 30-day hospital readmission among diabetic patients using the UCI Diabetes 130-US Hospitals dataset.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2><strong>📖 Overview</strong></h2>
-
-This project develops global and subgroup-specific machine-learning models to predict 30-day hospital readmission among diabetic patients using the UCI Diabetes 130-US Hospitals dataset.
-
-It demonstrates that subgroup-specific diagnostic models outperform global models in accuracy, recall, F1-score, and ROC-AUC — offering better clinical interpretability and risk stratification.
+By segmenting patients into diagnostic subgroups (Circulatory, Respiratory, and ENMI), this work demonstrates that subgroup-specific models reveal stronger predictive accuracy, improved recall, and clearer clinical interpretability compared to global modeling alone.
 
 <h2><strong>🎯 Project Objectives</strong></h2> <h3><strong>1. Data Preparation & Preprocessing</strong></h3>
 
-Cleaned and preprocessed dataset
+Cleaned and preprocessed all variables
 
 Removed high-missingness variables
 
-Encoded and regrouped categorical variables
+Encoded and regrouped categorical features
 
-Converted medications into binary indicators
+Converted medication variables into binary indicators
 
-Prevented label leakage by using only each patient’s first encounter
+Prevented data leakage by retaining only each patient's first encounter
 
 <h3><strong>2. Model Development</strong></h3>
 
-Models built: Logistic Regression, Linear SVM, KNN, Decision Tree, Random Forest, XGBoost, LightGBM
-Subgroup models created for:
+Algorithms implemented:
 
-Circulatory
+Logistic Regression
 
-Respiratory
+Linear SVM
 
-ENMI (Endocrine / Nutritional / Metabolic / Immune)
+KNN
 
-Techniques used:
+Decision Tree
 
-SMOTE
+Random Forest
+
+XGBoost
+
+LightGBM
+
+Models were built for:
+
+Global dataset
+
+Circulatory subgroup
+
+Respiratory subgroup
+
+ENMI subgroup
+
+Modeling techniques:
+
+SMOTE for class balancing
 
 5-fold cross-validation
 
-Confidence interval estimation
+Confidence intervals for all metrics
 
 <h3><strong>3. Evaluation & Interpretation</strong></h3>
 
-Performance metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
+Metrics used:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+ROC-AUC
+
 Outputs generated:
 
-ROC curves with 95% CI
+ROC curves
 
 Feature importance graphs
 
@@ -69,29 +78,29 @@ Classification reports
 
 Python (NumPy, Pandas, Scikit-learn)
 
-Random Forest, XGBoost, LightGBM
+Ensemble Models: Random Forest, XGBoost, LightGBM
 
-SMOTE for balancing
+Balancing Technique: SMOTE
 
-Matplotlib, Seaborn
+Visualization: Matplotlib, Seaborn
 
-Jupyter Notebook
+Development Environment: Jupyter Notebook
 
 <h2><strong>⚡ Challenges Faced</strong></h2>
 
-Extreme class imbalance
+Addressing class imbalance
 
-Avoiding leakage from repeated encounters
+Avoiding leakage from repeat patient encounters
 
-Highly heterogeneous categorical features
+Dealing with complex high-cardinality clinical variables
 
-Achieving stable subgroup performance
+Achieving consistent model performance across subgroups
 
-Interpreting subgroup-specific clinical predictors
+Interpreting subgroup-specific clinical patterns
 
-<h2><strong>✅ Outcomes Achieved</strong></h2> <h3><strong>1. Subgroup Models Outperformed the Global Model</strong></h3>
+<h2><strong>✅ Cross-Validation Results Summary</strong></h2>
 
-The Respiratory subgroup model delivered the best performance:
+The Respiratory subgroup model delivered the best cross-validation performance:
 
 Accuracy: 0.959
 
@@ -101,24 +110,32 @@ F1-score: 0.957
 
 ROC-AUC: 0.987
 
-<h3><strong>2. Random Forest Was the Best Performing Algorithm</strong></h3>
+Random Forest consistently emerged as the strongest algorithm across global and subgroup models, achieving the highest stability and predictive performance.
 
-Achieved consistently highest accuracy, recall, and ROC-AUC across all datasets.
+<h2><strong>📊 Trained Models Performance on Untouched 20% Test Dataset</strong></h2>
 
-<h3><strong>3. Strong Clinical Interpretability</strong></h3>
+The trained models demonstrated consistent performance when evaluated on the unseen 20% test dataset. While subgroup models excelled during cross-validation, their performance converged on the test set, showing similar generalization across all diagnostic groups.
 
-Key predictors included:
+<strong>Global Test Performance:</strong>
+Accuracy: 0.90
+Precision: 0.55
+Recall: 0.51
+F1-score: 0.50
 
-Number of inpatient visits
+<strong>Circulatory Test Performance:</strong>
+Accuracy: 0.90
+Precision: 0.56
+Recall: 0.51
+F1-score: 0.50
 
-Time in hospital
+<strong>Respiratory Test Performance:</strong>
+Accuracy: 0.91
+Precision: 0.57
+Recall: 0.51
+F1-score: 0.50
 
-Glucose serum levels
-
-Insulin usage
-
-Number of diagnoses
-
-<h3><strong>4. Consistent Real-World Test Performance</strong></h3>
-
-All final models achieved 0.90–0.91 accuracy on the unseen test set.
+<strong>ENMI Test Performance:</strong>
+Accuracy: 0.90
+Precision: 0.59
+Recall: 0.52
+F1-score: 0.52
