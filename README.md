@@ -129,7 +129,7 @@ F1-score: 0.920
 
 ROC-AUC: 0.964
 
-⭐ Circulatory Model (Random Forest – Best Circulatory Performance)
+<⭐ Circulatory Model (Random Forest – Best Circulatory Performance)>
 
 Accuracy: 0.933
 
