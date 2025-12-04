@@ -1,139 +1,113 @@
-📖 Overview
+🩺 <strong>Subgroup-Specific AI Models for Predicting 30-Day Readmission in Diabetes Patients</strong>
 
-This project develops global and subgroup-specific machine learning models to predict 30-day hospital readmission among diabetic patients using the UCI Diabetes 130-US Hospitals dataset.
 
-Current clinical prediction models often treat all diabetic patients as a homogeneous group, which can mask important differences across diagnostic categories. This project demonstrates that subgroup-specific AI models provide improved accuracy, recall, F1-scores, and ROC-AUC performance across key patient groups—including Circulatory, Respiratory, and Endocrine/Metabolic/Immune (ENMI) subpopulations.
 
-The system aims to:
 
-🔍 Identify high-risk diabetic patients more accurately
 
-📊 Improve clinical decision support for early intervention
 
-🧠 Reveal subgroup-level risk patterns through feature importance
 
-🏥 Provide evidence for personalized and data-driven disease management
 
-🎯 Project Objectives
-1. Data Preparation & Preprocessing
 
-Clean and preprocess the Diabetes 130-US Hospitals dataset
 
-Remove high-missingness variables (e.g., weight, medical specialty)
 
-Encode categorical features and regroup low-frequency categories
 
-Convert medication variables to meaningful binary indicators
 
-Reduce label leakage by using only the first encounter per patient 
 
-Project Proposal Report 1- Grou…
 
-2. Model Development
 
-Implement multiple ML models:
+<h2><strong>📖 Overview</strong></h2>
 
-Logistic Regression
+This project develops global and subgroup-specific machine-learning models to predict 30-day hospital readmission among diabetic patients using the UCI Diabetes 130-US Hospitals dataset.
 
-SVM (Linear)
+It demonstrates that subgroup-specific diagnostic models outperform global models in accuracy, recall, F1-score, and ROC-AUC — offering better clinical interpretability and risk stratification.
 
-KNN
+<h2><strong>🎯 Project Objectives</strong></h2> <h3><strong>1. Data Preparation & Preprocessing</strong></h3>
 
-Decision Tree
+Cleaned and preprocessed dataset
 
-Random Forest
+Removed high-missingness variables
 
-XGBoost
+Encoded and regrouped categorical variables
 
-LightGBM
+Converted medications into binary indicators
 
-Build global and three subgroup-specific models:
+Prevented label leakage by using only each patient’s first encounter
+
+<h3><strong>2. Model Development</strong></h3>
+
+Models built: Logistic Regression, Linear SVM, KNN, Decision Tree, Random Forest, XGBoost, LightGBM
+Subgroup models created for:
 
 Circulatory
 
 Respiratory
 
-ENMI (Endocrine/Nutritional/Metabolic/Immune)
+ENMI (Endocrine / Nutritional / Metabolic / Immune)
 
-Apply SMOTE, 5-fold cross-validation, and confidence interval estimation
+Techniques used:
 
-3. Evaluation & Interpretation
+SMOTE
 
-Assess model performance using:
+5-fold cross-validation
 
-Accuracy
+Confidence interval estimation
 
-Precision
+<h3><strong>3. Evaluation & Interpretation</strong></h3>
 
-Recall
+Performance metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
+Outputs generated:
 
-F1-score
+ROC curves with 95% CI
 
-ROC-AUC
+Feature importance graphs
 
-Generate:
+Confusion matrices
 
-📈 ROC curves (with 95% confidence intervals)
+Classification reports
 
-🧩 Feature importance plots
+<h2><strong>🛠️ Technologies Used</strong></h2>
 
-🟦 Confusion matrices
+Python (NumPy, Pandas, Scikit-learn)
 
-📝 Classification reports
+Random Forest, XGBoost, LightGBM
 
-🛠️ Technologies Used
+SMOTE for balancing
 
-Programming: Python (Pandas, NumPy, Scikit-learn)
+Matplotlib, Seaborn
 
-Ensemble Models: Random Forest, XGBoost, LightGBM
+Jupyter Notebook
 
-Visualization: Matplotlib, Seaborn
+<h2><strong>⚡ Challenges Faced</strong></h2>
 
-Data Balancing: SMOTE (imblearn)
+Extreme class imbalance
 
-Notebook Environment: Jupyter Notebook
+Avoiding leakage from repeated encounters
 
-⚡ Challenges Faced
+Highly heterogeneous categorical features
 
-Handling large categorical medical variables with many low-frequency groups
+Achieving stable subgroup performance
 
-Preventing data leakage caused by repeated patient encounters
+Interpreting subgroup-specific clinical predictors
 
-Managing severe class imbalance in the 30-day readmission outcome
+<h2><strong>✅ Outcomes Achieved</strong></h2> <h3><strong>1. Subgroup Models Outperformed the Global Model</strong></h3>
 
-Ensuring stability of cross-validated model performance across subgroups
+The Respiratory subgroup model delivered the best performance:
 
-Interpreting diagnostic-specific risk factors from high-dimensional datasets
+Accuracy: 0.959
 
-✅ Outcomes Achieved
-1. Subgroup Models Outperformed the Global Model
+Recall: 0.925
 
-The Respiratory subgroup model showed the highest performance:
+F1-score: 0.957
 
-Accuracy: 0.959 ± 0.005
+ROC-AUC: 0.987
 
-Recall: 0.925 ± 0.007
+<h3><strong>2. Random Forest Was the Best Performing Algorithm</strong></h3>
 
-F1-score: 0.957 ± 0.005
+Achieved consistently highest accuracy, recall, and ROC-AUC across all datasets.
 
-ROC-AUC: 0.987 ± 0.002
+<h3><strong>3. Strong Clinical Interpretability</strong></h3>
 
-
-Project Proposal Report 1- Grou…
-
-2. Random Forest Emerged as the Best Overall Model
-
-Across all subgroups, Random Forest:
-
-Achieved the highest accuracy, recall, and F1­-score
-
-Provided the most stable cross-validation performance
-
-Demonstrated superior ROC-AUC values
-
-3. Successful Model Interpretation & Clinical Insights
-
-Feature importance revealed key predictors such as:
+Key predictors included:
 
 Number of inpatient visits
 
@@ -141,10 +115,10 @@ Time in hospital
 
 Glucose serum levels
 
-Insulin and metformin usage
+Insulin usage
 
-Subgroups revealed unique risk profiles, supporting personalized clinical strategies
+Number of diagnoses
 
-4. Test Set Validation Showed Consistent Performance
+<h3><strong>4. Consistent Real-World Test Performance</strong></h3>
 
-All optimized models maintained 0.90–0.91 accuracy on unseen data.
+All final models achieved 0.90–0.91 accuracy on the unseen test set.
