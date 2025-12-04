@@ -16,7 +16,8 @@ Enhance clinical decision support for personalized care
 
 <img width="1097" height="251" alt="image" src="https://github.com/user-attachments/assets/219826ae-d938-4226-9caf-e091abca4b63" />
 
-<h2><strong>Data Preparation & Preprocessing</strong</h2> <h3>
+<h2><strong>Data Preparation & Preprocessing</strong></h2>
+
 Cleaned and preprocessed all variables
 
 Removed high-missingness variables
