@@ -111,11 +111,41 @@ Achieving consistent model performance across subgroups
 
 Interpreting subgroup-specific clinical patterns
 
-<h2><strong>✅ Cross-Validation Results Summary</strong></h2>
+<h2><strong>📊 Cross-Validation Performance Summary</strong></h2>
 
-The Respiratory subgroup model delivered the best cross-validation performance:
+Across all machine-learning algorithms tested, Random Forest consistently delivered the strongest and most well-rounded performance for the global model as well as all diagnostic subgroups. While LightGBM and XGBoost achieved perfect precision and competitive AUC values, their slightly lower recall and F1-scores made Random Forest the superior overall model. Simpler models such as Logistic Regression and Linear SVM showed substantially weaker performance, whereas KNN and Decision Tree achieved moderate but less consistent results.
+
+Below is a summary of the best-performing Random Forest model across all groups during cross-validation:
+
+⭐ Global Model (Random Forest – Best Overall Global Performance)
+
+Accuracy: 0.924
+
+Precision: 0.978
+
+Recall: 0.869
+
+F1-score: 0.920
+
+ROC-AUC: 0.964
+
+⭐ Circulatory Model (Random Forest – Best Circulatory Performance)
+
+Accuracy: 0.933
+
+Precision: 0.981
+
+Recall: 0.884
+
+F1-score: 0.930
+
+ROC-AUC: 0.968
+
+⭐ Respiratory Model (Random Forest – Highest Performance Across All Groups)
 
 Accuracy: 0.959
+
+Precision: 0.992
 
 Recall: 0.925
 
@@ -123,7 +153,31 @@ F1-score: 0.957
 
 ROC-AUC: 0.987
 
-Random Forest consistently emerged as the strongest algorithm across global and subgroup models, achieving the highest stability and predictive performance.
+⭐ ENMI Model (Random Forest – Strong, Balanced Performance)
+
+Accuracy: 0.945
+
+Precision: 0.976
+
+Recall: 0.912
+
+F1-score: 0.943
+
+ROC-AUC: 0.982
+
+🧠 Cross-Validation Insight
+
+These results highlight several key findings:
+
+Random Forest dominated performance across all diagnostic subgroups.
+
+Respiratory subgroup exhibited the highest overall metrics, indicating strong subgroup-specific signal.
+
+ENMI subgroup also demonstrated exceptional performance, particularly in recall and AUC.
+
+Global model performance was strong but consistently outperformed by subgroup-specific models.
+
+Non-ensemble models showed weaker generalization and discriminatory power.
 
 <h2><strong>📊 Trained Models Performance on Untouched 20% Test Dataset</strong></h2>
 
