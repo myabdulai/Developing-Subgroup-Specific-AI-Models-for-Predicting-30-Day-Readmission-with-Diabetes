@@ -27,7 +27,7 @@ Converted medication variables into binary indicators
 
 Prevented data leakage by retaining only each patient's first encounter
 
-<h3><strong>2. Model Development</strong></h3>
+<h2><strong>2. Model Development</strong></h2>
 
 Algorithms implemented:
 
@@ -63,7 +63,7 @@ SMOTE for class balancing
 
 Confidence intervals for all metrics
 
-<h3><strong>3. Evaluation & Interpretation</strong></h3>
+<h2><strong>3. Evaluation & Interpretation</strong></h2>
 
 Metrics used:
 
