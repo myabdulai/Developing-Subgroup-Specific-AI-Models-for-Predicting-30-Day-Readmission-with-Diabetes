@@ -2,7 +2,7 @@
 
 This project develops global and subgroup-specific machine learning models to predict 30-day hospital readmission among diabetic patients using the UCI Diabetes 130-US Hospitals dataset. Hospital readmission is a critical quality metric, and early identification of high-risk patients can significantly improve care coordination and reduce healthcare costs.
 
-By stratifying patients according to their primary diagnosis—including Circulatory, Respiratory, and Endocrine/Nutritional/Metabolic/Immune (ENMI) categories—the project demonstrates that subgroup-specific models provide superior predictive accuracy, stronger recall, and more clinically interpretable feature importance patterns compared to a single global model. These results highlight the value of personalized, diagnosis-specific AI models in clinical decision support.
+By stratifying patients according to their primary diagnosis including Circulatory, Respiratory, and Endocrine/Nutritional/Metabolic/Immune (ENMI) categories—the project demonstrates that subgroup-specific models provide superior predictive accuracy, stronger recall, and more clinically interpretable feature importance patterns compared to a single global model. These results highlight the value of personalized, diagnosis-specific AI models in clinical decision support.
 
 <h2><strong>🎯 Project Objectives</strong></h2>
 
