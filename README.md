@@ -165,3 +165,7 @@ Accuracy: 0.90
 Precision: 0.59
 Recall: 0.52
 F1-score: 0.52
+
+## 👥 Contributors
+- Mohammed Yushawu Abdulai  
+- Peter Mvuma
